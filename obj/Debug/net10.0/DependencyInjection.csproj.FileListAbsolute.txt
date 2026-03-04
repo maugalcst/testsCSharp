@@ -32,3 +32,4 @@ C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjecti
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\DependencyInjection.pdb
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\DependencyInjection.genruntimeconfig.cache
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\ref\DependencyInjection.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\DependencyInjection.sourcelink.json
