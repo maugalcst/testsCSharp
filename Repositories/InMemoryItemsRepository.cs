@@ -2,7 +2,7 @@ using DependencyInjection.Entities;
 
 namespace DependencyInjection.Repositories
 {
-    public class InMemoryItemsRepository
+    public class InMemoryItemsRepository : IItemsRepository
     {
         private readonly List<Item> _items = new()
         {

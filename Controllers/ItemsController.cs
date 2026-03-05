@@ -8,9 +8,9 @@ namespace DependencyInjection.Controllers
     [Route("[controller]")]
     public class ItemsController : ControllerBase
     {
-        private readonly InMemoryItemsRepository _repository;
+        private readonly IItemsRepository _repository;
 
-        public ItemsController(InMemoryItemsRepository repository)
+        public ItemsController(IItemsRepository repository)
         {
             _repository = repository;
         }
@@ -21,7 +21,7 @@ namespace DependencyInjection.Controllers
             return _repository.GetAll();
         }
 
-        [HttpPost("{id}")]
+        [HttpGet("{id}")]
         public ActionResult<Item> GetById(Guid id)
         {
             var item = _repository.GetById(id);
