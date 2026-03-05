@@ -1,3 +1,4 @@
+using DependencyInjection.Dtos;
 using DependencyInjection.Entities;
 using DependencyInjection.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -16,13 +17,13 @@ namespace DependencyInjection.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Item> GetAll()
+        public IEnumerable<ItemDto> GetAll()
         {
-            return _repository.GetAll();
+            return _repository.GetAll().Select(item => item.AsDto());
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Item> GetById(Guid id)
+        public ActionResult<ItemDto> GetById(Guid id)
         {
             var item = _repository.GetById(id);
 
@@ -31,7 +32,7 @@ namespace DependencyInjection.Controllers
                 return NotFound();
             }
 
-            return item;
+            return item.AsDto();
         }
     }
 }

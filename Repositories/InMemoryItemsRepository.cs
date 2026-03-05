@@ -6,9 +6,9 @@ namespace DependencyInjection.Repositories
     {
         private readonly List<Item> _items = new()
         {
-            new Item { Id = Guid.NewGuid(), Name = "Wilson Pro Staff V14", Price = 250, CreatedDate = DateTimeOffset.UtcNow },
-            new Item { Id = Guid.NewGuid(), Name = "Babolat Pure Aero", Price = 230, CreatedDate = DateTimeOffset.UtcNow },
-            new Item { Id = Guid.NewGuid(), Name = "Can of Tennis Balls", Price = 5, CreatedDate = DateTimeOffset.UtcNow }
+            new Item { Id = Guid.NewGuid(), Name = "Wilson Pro Staff V14", Price = 250, CreatedDate = DateTimeOffset.UtcNow, InternalCostPrice = 80 },
+            new Item { Id = Guid.NewGuid(), Name = "Babolat Pure Aero", Price = 230, CreatedDate = DateTimeOffset.UtcNow, InternalCostPrice = 75 },
+            new Item { Id = Guid.NewGuid(), Name = "Can of Tennis Balls", Price = 5, CreatedDate = DateTimeOffset.UtcNow, InternalCostPrice = 1 },
         };
 
         public IEnumerable<Item> GetAll()
