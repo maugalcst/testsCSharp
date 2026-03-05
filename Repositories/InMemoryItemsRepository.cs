@@ -11,6 +11,21 @@ namespace DependencyInjection.Repositories
             new Item { Id = Guid.NewGuid(), Name = "Can of Tennis Balls", Price = 5, CreatedDate = DateTimeOffset.UtcNow, InternalCostPrice = 1 },
         };
 
+        public void Create(Item item)
+        {
+            _items.Add(item);
+        }
+
+        public void Delete(Guid id)
+        {
+            var itemToDelete = _items.Find(x => x.Id == id);
+            if (itemToDelete != null)
+            {
+                _items.Remove(itemToDelete);
+            }
+                
+        }
+
         public IEnumerable<Item> GetAll()
         {
             return _items;
@@ -19,6 +34,17 @@ namespace DependencyInjection.Repositories
         public Item GetById(Guid id)
         {
             return _items.Where(item => item.Id == id).SingleOrDefault();
+        }
+
+        public void Update(Item item)
+        {
+            var oldItem = _items.Find(x => x.Id == item.Id);
+            if (oldItem != null)
+            {
+                _items.Remove(oldItem);
+                _items.Add(item);
+            }
+            
         }
     }
 }

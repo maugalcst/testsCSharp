@@ -6,5 +6,9 @@ namespace DependencyInjection.Repositories
     {
         IEnumerable<Item> GetAll();
         Item GetById(Guid id);
+        void Create(Item item);
+        void Update(Item item);
+        void Delete(Guid id);
+
     }
 }

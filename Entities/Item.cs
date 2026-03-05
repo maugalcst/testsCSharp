@@ -7,5 +7,6 @@ namespace DependencyInjection.Entities
         public decimal Price { get; init; }
         public DateTimeOffset CreatedDate { get; init; }
         public decimal InternalCostPrice { get; init; }
+        
     }
 }
