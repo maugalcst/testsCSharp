@@ -16,29 +16,29 @@ namespace DependencyInjection.Repositories
             _collection = database.GetCollection<Item>(CollectionName);
         }
 
-        public void Create(Item item)
+        public async Task CreateAsync(Item item)
         {
-            _collection.InsertOne(item);
+            await _collection.InsertOneAsync(item);
         }
 
-        public void Delete(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
-            _collection.DeleteOne(item => item.Id == id);
+            await _collection.DeleteOneAsync(item => item.Id == id);
         }
 
-        public IEnumerable<Item> GetAll()
+        public async Task<IEnumerable<Item>> GetAllAsync()
         {
-            return _collection.Find(_ => true).ToList();
+            return await _collection.Find(_ => true).ToListAsync();
         }
 
-        public Item GetById(Guid id)
+        public async Task<Item> GetByIdAsync(Guid id)
         {
-            return _collection.Find(item => item.Id == id).SingleOrDefault();
+            return await _collection.Find(item => item.Id == id).SingleOrDefaultAsync();
         }
 
-        public void Update(Item item)
+        public async Task UpdateAsync(Item item)
         {
-            _collection.ReplaceOne(x => x.Id == item.Id, item);
+            await _collection.ReplaceOneAsync(x => x.Id == item.Id, item);
         }
     }
 }

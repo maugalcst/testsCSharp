@@ -4,11 +4,11 @@ namespace DependencyInjection.Repositories
 {
     public interface IItemsRepository
     {
-        IEnumerable<Item> GetAll();
-        Item GetById(Guid id);
-        void Create(Item item);
-        void Update(Item item);
-        void Delete(Guid id);
+        Task<IEnumerable<Item>> GetAllAsync();
+        Task<Item> GetByIdAsync(Guid id);
+        Task CreateAsync(Item item);
+        Task UpdateAsync(Item item);
+        Task DeleteAsync(Guid id);
 
     }
 }
