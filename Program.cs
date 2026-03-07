@@ -11,7 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
-builder.Services.AddSingleton<IMongoClient>(new MongoClient("mongodb://localhost:27017"));
+builder.Services.AddSingleton<IMongoClient>(new MongoClient(
+    builder.Configuration.GetConnectionString("MongoDb") ?? "mongodb://localhost:27027"
+));
 builder.Services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
@@ -26,6 +28,5 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
-app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
