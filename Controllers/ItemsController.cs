@@ -52,6 +52,42 @@ namespace DependencyInjection.Controllers
 
         }
 
+        [HttpPut("{id}")]
+        public ActionResult<UpdateItemDto> UpdateItem(Guid id, UpdateItemDto item)
+        {
+               var existingItem = _repository.GetById(id);
+
+               if (existingItem is null) {
+                    return NotFound();
+               }
+
+               var updatedItem = new Item
+               {
+                   Id = id,
+                   Name = item.Name,
+                   Price = item.Price,
+                   CreatedDate = existingItem.CreatedDate
+               };
+
+               _repository.Update(updatedItem);
+
+               return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult DeleteItem(Guid id)
+        {
+            var itemToDelete = _repository.GetById(id);
+
+            if (itemToDelete is null)
+            {
+                return NotFound();
+            }
+
+            _repository.Delete(itemToDelete.Id);
+            return NoContent();
+        }
+
     }
 }
 
