@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[10.0.2, )"
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
             "Scalar.AspNetCore": {
               "target": "Package",
               "version": "[2.12.46, )"

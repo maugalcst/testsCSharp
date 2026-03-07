@@ -33,3 +33,9 @@ C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjecti
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\DependencyInjection.genruntimeconfig.cache
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\ref\DependencyInjection.dll
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\obj\Debug\net10.0\DependencyInjection.sourcelink.json
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\DnsClient.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\MongoDB.Bson.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\MongoDB.Driver.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\SharpCompress.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\Snappier.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\ZstdSharp.dll
