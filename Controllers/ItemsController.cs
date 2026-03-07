@@ -53,7 +53,7 @@ namespace DependencyInjection.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<UpdateItemDto>> UpdateItem(Guid id, UpdateItemDto item)
+        public async Task<ActionResult> UpdateItem(Guid id, UpdateItemDto item)
         {
                var existingItem = await _repository.GetByIdAsync(id);
 
