@@ -1,4 +1,5 @@
 using DependencyInjection.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace DependencyInjection.Dtos
 {
@@ -10,13 +11,13 @@ namespace DependencyInjection.Dtos
     );
 
     public record CreateItemDto(
-        string Name, 
-        decimal Price
+        [Required] string Name, 
+        [Range(1, 3000)] decimal Price
     );
 
     public record UpdateItemDto(
-        string Name,
-        decimal Price
+        [Required] string Name, 
+        [Range(1, 3000)] decimal Price
     );
 
     public static class ItemExtensions
