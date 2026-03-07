@@ -34,6 +34,24 @@ namespace DependencyInjection.Controllers
 
             return item.AsDto();
         }
+
+        [HttpPost]
+        public ActionResult<CreateItemDto> CreateItem(CreateItemDto item)
+        {
+            var newItem = new Item 
+            {
+                Id = Guid.NewGuid(),
+                Name = item.Name,
+                Price = item.Price,
+                CreatedDate = DateTimeOffset.UtcNow
+            };
+
+            _repository.Create(newItem);
+
+            return CreatedAtAction(nameof(GetById), new { id = newItem.Id }, newItem.AsDto());
+
+        }
+
     }
 }
 
