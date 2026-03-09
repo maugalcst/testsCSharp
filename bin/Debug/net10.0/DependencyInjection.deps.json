@@ -8,12 +8,24 @@
     ".NETCoreApp,Version=v10.0": {
       "DependencyInjection/1.0.0": {
         "dependencies": {
+          "AspNetCore.HealthChecks.MongoDb": "9.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.2",
           "MongoDB.Driver": "3.7.0",
           "Scalar.AspNetCore": "2.12.46"
         },
         "runtime": {
           "DependencyInjection.dll": {}
+        }
+      },
+      "AspNetCore.HealthChecks.MongoDb/9.0.0": {
+        "dependencies": {
+          "MongoDB.Driver": "3.7.0"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.MongoDb.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
         }
       },
       "DnsClient/1.6.1": {
@@ -105,6 +117,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNetCore.HealthChecks.MongoDb/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WAmROqEXlVzjgCdEa9Zor2l6T29jsnKMJQPGbTnkrgpyqPcjwOomuh91CiAebmeWJ/CKenVX+fV/VFffnskgvw==",
+      "path": "aspnetcore.healthchecks.mongodb/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.mongodb.9.0.0.nupkg.sha512"
     },
     "DnsClient/1.6.1": {
       "type": "package",

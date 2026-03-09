@@ -39,3 +39,4 @@ C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjecti
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\SharpCompress.dll
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\Snappier.dll
 C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\ZstdSharp.dll
+C:\Users\mauri\OneDrive\Desktop\workshop\backend\FASE 1\CLAUDE\DependencyInjection\bin\Debug\net10.0\HealthChecks.MongoDb.dll

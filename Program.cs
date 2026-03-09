@@ -15,6 +15,7 @@ builder.Services.AddSingleton<IMongoClient>(new MongoClient(
     builder.Configuration.GetConnectionString("MongoDb") ?? "mongodb://localhost:27027"
 ));
 builder.Services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
+builder.Services.AddHealthChecks().AddMongoDb(sp => sp.GetRequiredService<IMongoClient>());
 
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
@@ -29,4 +30,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+app.MapHealthChecks("/health");
 app.Run();
